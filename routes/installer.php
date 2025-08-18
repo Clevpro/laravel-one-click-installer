@@ -24,32 +24,32 @@ Route::prefix($routePrefix)
     ->middleware($middleware)
     ->name('installer.')
     ->group(function () {
-        
+
         // Step 1: Welcome screen
         Route::get('/', [InstallerController::class, 'welcome'])
             ->name('welcome');
-        
+
         // Step 2: Environment setup
         Route::get('/environment', [InstallerController::class, 'environment'])
             ->name('environment');
-        
+
         Route::post('/environment', [InstallerController::class, 'storeEnvironment'])
             ->name('environment.store');
-        
+
         // Step 3: Database migrations
         Route::get('/migrations', [InstallerController::class, 'migrations'])
             ->name('migrations');
-        
+
         Route::post('/migrations', [InstallerController::class, 'runMigrations'])
             ->name('migrations.run');
-        
+
         // Step 4: Admin account creation
         Route::get('/admin', [InstallerController::class, 'admin'])
             ->name('admin');
-        
+
         Route::post('/admin', [InstallerController::class, 'storeAdmin'])
             ->name('admin.store');
-        
+
         // Step 5: Installation complete
         Route::get('/finish', [InstallerController::class, 'finish'])
             ->name('finish');
@@ -62,7 +62,7 @@ Route::prefix($routePrefix . '/assets')
         Route::get('/css/{filename}', [AssetController::class, 'css'])
             ->name('css')
             ->where('filename', '.*\.css$');
-        
+
         Route::get('/js/{filename}', [AssetController::class, 'js'])
             ->name('js')
             ->where('filename', '.*\.js$');
