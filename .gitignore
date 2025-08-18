@@ -1,0 +1,65 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# IDE and Editor files
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+/storage/logs/*.log
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache and temp files
+/bootstrap/cache/
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/views/
+/storage/app/public/
+*.cache
+
+# Test files
+/tests/coverage/
+.phpunit.result.cache
+phpunit.xml
+
+# Build files
+/build/
+/dist/
+/public/vendor/
+
+# Package files
+composer.lock
+package-lock.json
+yarn.lock
+
+# Documentation builds
+/docs/build/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Misc
+*.tmp
+*.temp

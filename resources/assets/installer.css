@@ -1,0 +1,136 @@
+/* Laravel One-Click Installer - Additional Styles */
+
+/* Custom animations for the installer */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Installer specific styles */
+.installer-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.installer-card {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.installer-button {
+    transition: all 0.2s ease-in-out;
+}
+
+.installer-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.installer-progress-bar {
+    transition: width 0.3s ease-in-out;
+}
+
+.installer-step-indicator {
+    transition: all 0.3s ease-in-out;
+}
+
+.installer-fade-in {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.installer-pulse {
+    animation: pulse 2s infinite;
+}
+
+.installer-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Form enhancements */
+input{
+    padding: 10px !important;
+}
+input:focus {
+    ring-width: 2px;
+    ring-color: var(--installer-primary-color, #10b981);
+    border-color: var(--installer-primary-color, #10b981);
+}
+
+.installer-checkbox:checked {
+    background-color: var(--installer-primary-color, #10b981);
+    border-color: var(--installer-primary-color, #10b981);
+}
+
+/* Responsive enhancements */
+@media (max-width: 640px) {
+    .installer-container {
+        padding: 1rem;
+    }
+    
+    .installer-card {
+        margin: 0.5rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .installer-container {
+        display: none;
+    }
+}
+
+/* Dark mode support (if needed) */
+@media (prefers-color-scheme: dark) {
+    .installer-dark-mode {
+        background-color: #1f2937;
+        color: #f9fafb;
+    }
+}
+
+/* Accessibility enhancements */
+.installer-focus-visible:focus-visible {
+    outline: 2px solid var(--installer-primary-color, #10b981);
+    outline-offset: 2px;
+}
+
+/* Success animations */
+.installer-success-bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40%, 43% {
+        transform: translateY(-15px);
+    }
+    70% {
+        transform: translateY(-7px);
+    }
+    90% {
+        transform: translateY(-3px);
+    }
+}

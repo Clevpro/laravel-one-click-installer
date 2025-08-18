@@ -1,0 +1,86 @@
+{
+    "name": "clevpro/laravel-one-click-installer",
+    "description": "A beautiful and comprehensive one-click installer package for Laravel applications featuring TailwindCSS UI, intelligent installation management, and developer-friendly tools",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "installer",
+        "one-click",
+        "setup",
+        "wizard",
+        "tailwindcss",
+        "installation",
+        "saas",
+        "deployment",
+        "ui",
+        "responsive",
+        "management",
+        "middleware",
+        "artisan",
+        "service"
+    ],
+    "homepage": "https://github.com/clevpro/laravel-one-click-installer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clevpro Team",
+            "email": "info@clevpro.com",
+            "homepage": "https://clevpro.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/clevpro/laravel-one-click-installer/issues",
+        "source": "https://github.com/clevpro/laravel-one-click-installer",
+        "docs": "https://github.com/clevpro/laravel-one-click-installer#readme",
+        "email": "support@clevpro.com"
+    },
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0|^12.0",
+        "illuminate/support": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Clevpro\\LaravelOneClickInstaller\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Clevpro\\LaravelOneClickInstaller\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Clevpro\\LaravelOneClickInstaller\\OneClickInstallerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "analyse": "vendor/bin/phpstan analyse",
+        "cs-check": "vendor/bin/php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "vendor/bin/php-cs-fixer fix"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/clevpro"
+        }
+    ]
+}
