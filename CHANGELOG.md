@@ -5,6 +5,19 @@ All notable changes to the Laravel One-Click Installer package will be documente
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### 🔧 Added
+- **Diagnostic Commands**: New artisan commands for troubleshooting installation issues
+  - `php artisan installer:diagnose` - Comprehensive diagnostic report
+  - `php artisan installer:install` - Manual installation marking for testing
+- **Zero-Config Assets**: CSS/JS served directly from package without publishing required
+- **Enhanced Installation Service**: Improved environment variable handling and validation
+
+### 🐛 Fixed
+- **Asset Loading**: Fixed CSS/JavaScript loading without requiring asset publishing
+- **Environment Checking**: Improved handling of missing `APP_INSTALLED` environment variable
+
 ## [1.0.0] - 2025-08-18
 
 ### 🎉 Initial Release

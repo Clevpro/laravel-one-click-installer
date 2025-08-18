@@ -21,6 +21,7 @@ class RedirectToInstaller
      */
     public function handle(Request $request, Closure $next): Response
     {
+        
         // Skip for AJAX requests and API routes
         if ($request->wantsJson() || $request->is('api/*')) {
             return $next($request);

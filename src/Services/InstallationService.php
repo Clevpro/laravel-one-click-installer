@@ -30,7 +30,9 @@ class InstallationService
     public function checkByEnvironment(): bool
     {
         $envKey = config('one-click-installer.installation_check.env_key', 'APP_INSTALLED');
-        return env($envKey, false) === 'true' || env($envKey, false) === true;
+        $envValue = env($envKey, false);
+        
+        return $envValue === 'true' || $envValue === true;
     }
 
     /**

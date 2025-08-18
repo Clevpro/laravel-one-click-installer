@@ -33,7 +33,7 @@ return [
     |
     */
     'installation_check' => [
-        'method' => 'env', // env, file, database
+        'method' => 'file', // env, file, database
         'env_key' => 'APP_INSTALLED',
         'file_path' => storage_path('app/installed'),
         'database_table' => 'settings',

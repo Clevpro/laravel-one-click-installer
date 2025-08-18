@@ -7,6 +7,8 @@ use Clevpro\LaravelOneClickInstaller\Http\Middleware\RedirectIfInstalled;
 use Clevpro\LaravelOneClickInstaller\Http\Middleware\RedirectToInstaller;
 use Clevpro\LaravelOneClickInstaller\Services\InstallationService;
 use Clevpro\LaravelOneClickInstaller\Console\Commands\InstallationStatusCommand;
+use Clevpro\LaravelOneClickInstaller\Console\Commands\InstallationDiagnosticCommand;
+use Clevpro\LaravelOneClickInstaller\Console\Commands\MarkInstalledCommand;
 
 class OneClickInstallerServiceProvider extends ServiceProvider
 {
@@ -45,6 +47,8 @@ class OneClickInstallerServiceProvider extends ServiceProvider
             // Register console commands
             $this->commands([
                 InstallationStatusCommand::class,
+                InstallationDiagnosticCommand::class,
+                MarkInstalledCommand::class,
             ]);
 
             $this->publishes([
