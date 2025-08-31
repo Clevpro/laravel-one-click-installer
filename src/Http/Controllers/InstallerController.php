@@ -191,7 +191,7 @@ class InstallerController extends Controller
         try {
             
             $userModel = config('one-click-installer.admin_user.model');
-            
+
             $admin = $userModel::updateOrCreate([
                 'id' => 1,
             ], [
