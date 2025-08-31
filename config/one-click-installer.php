@@ -69,7 +69,7 @@ return [
     'admin_user' => [
         'model' => \App\Models\User::class,
         'default_role' => 'admin',
-        'email_verification' => false,
+        'email_verification' => true,
         'force_password_reset' => false,
     ],
 
